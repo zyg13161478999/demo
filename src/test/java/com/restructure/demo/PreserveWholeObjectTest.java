@@ -17,13 +17,13 @@ public class PreserveWholeObjectTest {
     public void should_in_plan() {
         PreserveWholeObject preserveWholeObject = new PreserveWholeObject(new PreserveWholeObject.MeetingPlan(new TempRange(1, 10)));
         final TempRange tempRange = new TempRange(3,8);
-        Assert.assertTrue(preserveWholeObject.isWithinPlan(tempRange.getLow(),tempRange.getLow()));
+        Assert.assertTrue(preserveWholeObject.isWithinPlan(tempRange));
     }
 
     @Test
     public void should_not_in_plan() {
         PreserveWholeObject preserveWholeObject = new PreserveWholeObject(new PreserveWholeObject.MeetingPlan(new TempRange(2, 8)));
         final TempRange tempRange = new TempRange(1,8);
-        Assert.assertFalse(preserveWholeObject.isWithinPlan(tempRange.getLow(),tempRange.getLow()));
+        Assert.assertFalse(preserveWholeObject.isWithinPlan(tempRange));
     }
 }

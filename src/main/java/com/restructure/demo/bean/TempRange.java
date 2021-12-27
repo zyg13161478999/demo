@@ -1,5 +1,7 @@
 package com.restructure.demo.bean;
 
+import com.restructure.demo.PreserveWholeObject;
+
 /**
  * @author .gang
  * @date 2021/12/27
@@ -23,4 +25,10 @@ public class TempRange {
         return high;
     }
 
+    public boolean isInclude(TempRange tempRange) {
+         if (tempRange.getLow() > getLow() && tempRange.getHigh() < getHigh()) {
+             return true;
+         }
+         return false;
+     }
 }
