@@ -20,13 +20,11 @@ public class ReplaceParameterWithQuery {
 
     public Double calcFinalPrice() {
         int basePrice = quantity * itemPrice;
-        double seasonalDiscount = this.getSeasonalDiscount();
-        double feesPrize = this.getFees();
-        return discountedPrice(basePrice,seasonalDiscount,feesPrize);
+        return discountedPrice(basePrice);
     }
 
-    private Double discountedPrice(int basePrice, double seasonalDiscount, double feesPrize) {
-        return basePrice * seasonalDiscount * feesPrize;
+    private Double discountedPrice(int basePrice) {
+        return basePrice * this.getSeasonalDiscount() * this.getFees();
     }
 
     private double getFees() {
