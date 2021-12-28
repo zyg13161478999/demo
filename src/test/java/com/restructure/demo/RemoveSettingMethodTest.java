@@ -12,14 +12,14 @@ public class RemoveSettingMethodTest {
 
     @Test
     public void should_return_false() {
-        String test = "test";
+        String test = "t";
         RemoveSettingMethod method = new RemoveSettingMethod("test");
         Assert.assertFalse(test.equals(method.get_id()));
     }
 
     @Test
     public void should_return_true() {
-        String test = "t";
+        String test = "test";
         RemoveSettingMethod method = new RemoveSettingMethod("test");
         Assert.assertTrue(test.equals(method.get_id()));
     }

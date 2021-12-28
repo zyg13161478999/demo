@@ -8,12 +8,11 @@ package com.restructure.demo;
  */
 public class RemoveSettingMethod {
     private String _id;
-    RemoveSettingMethod(String id){
-        setId(id);
+
+    RemoveSettingMethod(String id) {
+        _id = id;
     }
-    void setId(String arg) {
-        _id = arg.substring(0,1);
-    }
+
 
     public String get_id() {
         return _id;
