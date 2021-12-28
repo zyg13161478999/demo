@@ -2,6 +2,8 @@ package com.restructure.demo;
 
 
 import com.restructure.demo.bean.Employee;
+import com.restructure.demo.bean.Engineer;
+import com.restructure.demo.bean.Manager;
 import com.restructure.demo.bean.Salesman;
 import org.junit.Assert;
 import org.junit.Test;
@@ -13,23 +15,21 @@ import org.junit.Test;
 public class ReplaceConstructorwithFactoryMethodTest {
 
 
-    private Salesman Salesman;
-
     @Test
-    public void should_return_SALESMAN() {
+    public void should_return_SALESMAN() throws Exception {
         ReplaceConstructorwithFactoryMethod method = new ReplaceConstructorwithFactoryMethod();
-        Assert.assertEquals(1,method.getLevel(Employee.SALESMAN).get_type());
+        Assert.assertTrue(new Salesman().getClass() == method.getLevel(Employee.SALESMAN).getClass());
     }
 
     @Test
-    public void should_return_ENGINEER() {
+    public void should_return_ENGINEER() throws Exception {
         ReplaceConstructorwithFactoryMethod method = new ReplaceConstructorwithFactoryMethod();
-        Assert.assertEquals(2,method.getLevel(Employee.MANAGER).get_type());
+        Assert.assertTrue(new Manager().getClass() == method.getLevel(Employee.MANAGER).getClass());
     }
 
     @Test
-    public void should_return_MANAGER() {
+    public void should_return_MANAGER() throws Exception {
         ReplaceConstructorwithFactoryMethod method = new ReplaceConstructorwithFactoryMethod();
-        Assert.assertEquals(0,method.getLevel(Employee.ENGINEER).get_type());
+        Assert.assertTrue(new Engineer().getClass() == method.getLevel(Employee.ENGINEER).getClass());
     }
 }
