@@ -7,7 +7,7 @@ package com.restructure.demo.bean;
  * @date 2021/12/28
  */
 public class Employee {
-    public int _type;
+    public int type;
     //工程师
     public static final int ENGINEER = 0;
     //售货员
@@ -30,6 +30,8 @@ public class Employee {
                 throw new Exception("Incorrect type code value.");
         }
     }
-
+    public int getType(){
+        return type;
+    }
 
 }

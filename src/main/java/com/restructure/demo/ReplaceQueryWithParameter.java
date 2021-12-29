@@ -11,9 +11,11 @@ public class ReplaceQueryWithParameter {
 
 
     public static String getThermostat(Thermostat thermostat) {
-        if (thermostat.getSelectedTemperature() > thermostat.getCurrentTemperature()) {
+        int selectedTemperature = thermostat.getSelectedTemperature();
+        int currentTemperature = thermostat.getCurrentTemperature();
+        if (selectedTemperature > currentTemperature) {
             return "heat";
-        } else if (thermostat.getSelectedTemperature() < thermostat.getCurrentTemperature()) {
+        } else if (selectedTemperature < currentTemperature) {
             return "cool";
         } else {
             return "ok";
