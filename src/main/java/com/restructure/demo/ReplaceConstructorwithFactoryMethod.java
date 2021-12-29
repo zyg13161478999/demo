@@ -9,7 +9,7 @@ import com.restructure.demo.bean.Employee;
  */
 public class ReplaceConstructorwithFactoryMethod {
 
-    public Employee getLevel(int type){
-        return new Employee(type);
+    public Employee getLevel(int type) throws Exception {
+        return  Employee.create(type);
     }
 }
