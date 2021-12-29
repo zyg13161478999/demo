@@ -18,4 +18,12 @@ public class ReplaceFunctionWithCommandTest {
         Assert.assertEquals(517,gamma);
 
     }
+
+    @Test
+    public void gamma_n() {
+        ReplaceFunctionWithCommand command  = new ReplaceFunctionWithCommand();
+        int gamma = command.gamma_n(1, 2, 3);
+        Assert.assertEquals(517,gamma);
+
+    }
 }

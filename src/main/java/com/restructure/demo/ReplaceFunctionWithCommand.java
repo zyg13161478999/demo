@@ -1,5 +1,7 @@
 package com.restructure.demo;
 
+import com.restructure.demo.bean.Gamma;
+
 /**
  * @author .gang
  * 以命令取代函数
@@ -19,6 +21,13 @@ public class ReplaceFunctionWithCommand {
         }
         int importantValue3 = importantValue2 * 7;
         return importantValue3 - 2 * importantValue1;
+    }
+
+    /**
+     * 计量方法(重构后)
+     */
+    public int gamma_n(int inputVal, int quantity, int yearToDate){
+        return new Gamma(inputVal, quantity, yearToDate, this).compute();
     }
 
 
