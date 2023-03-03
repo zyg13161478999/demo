@@ -4,6 +4,8 @@ package com.restructure.demo.TransferObjectPattern;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.UUID;
+
 /**
  * @author .gang
  * @date 2023/1/10
@@ -51,5 +53,9 @@ public class TransferObjectPatternDemo {
             System.out.println("Student: [RollNo : "
                     +studentVo.getRollNo()+", Name : "+studentVo.getName()+" ]");
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(UUID.randomUUID().toString());
     }
 }
